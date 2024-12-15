@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 // Import Screens
+import WelcomeScreen from '../screens/WelcomeScreen'; // Add WelcomeScreen
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import MessageScreen from '../screens/MessageScreen';
 import ChatScreen from '../screens/ChatScreen';
 
 const AppNavigator = () => {
-  const [currentScreen, setCurrentScreen] = useState('Login');
+  const [currentScreen, setCurrentScreen] = useState('Welcome'); // Set initial screen to Welcome
 
   // Function to handle screen navigation
   const navigate = (screen: string) => {
@@ -18,7 +19,9 @@ const AppNavigator = () => {
 
   // Determine which screen to render
   let ScreenComponent;
-  if (currentScreen === 'Login') {
+  if (currentScreen === 'Welcome') {
+    ScreenComponent = <WelcomeScreen navigate={navigate} />; // Add WelcomeScreen
+  } else if (currentScreen === 'Login') {
     ScreenComponent = <LoginScreen navigate={navigate} />;
   } else if (currentScreen === 'Register') {
     ScreenComponent = <RegisterScreen navigate={navigate} />;
