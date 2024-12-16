@@ -29,7 +29,7 @@ const RegisterScreen = ({ navigate }: { navigate: (screen: string) => void }) =>
     }
 
     try {
-      const response = await axios.post('http://10.0.2.2:5000/api/auth/register', {
+      const response = await axios.post('http://10.0.2.2:5000/api/register', {
         username,
         email,
         password,

@@ -6,6 +6,7 @@ import { View, StyleSheet } from 'react-native';
 import WelcomeScreen from '../screens/WelcomeScreen'; // Add WelcomeScreen
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
+import HomeScreen from '../screens/HomeScreen';
 import MessageScreen from '../screens/MessageScreen';
 import ChatScreen from '../screens/ChatScreen';
 
@@ -21,11 +22,15 @@ const AppNavigator = () => {
   let ScreenComponent;
   if (currentScreen === 'Welcome') {
     ScreenComponent = <WelcomeScreen navigate={navigate} />; // Add WelcomeScreen
-  } else if (currentScreen === 'Login') {
+  }
+   else if (currentScreen === 'Login') {
     ScreenComponent = <LoginScreen navigate={navigate} />;
   } else if (currentScreen === 'Register') {
     ScreenComponent = <RegisterScreen navigate={navigate} />;
-  } else if (currentScreen === 'Messages') {
+  }
+  else if (currentScreen === 'Home') {
+      ScreenComponent = <HomeScreen navigate={navigate} />;
+       }else if (currentScreen === 'Messages') {
     ScreenComponent = <MessageScreen navigate={navigate} />;
   } else if (currentScreen === 'Chat') {
     ScreenComponent = <ChatScreen navigate={navigate} />;

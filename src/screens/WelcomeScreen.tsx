@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
     color: '#FB9EC6',
-    marginBottom: 10,
+    marginBottom: 15,
   },
   subtitle: {
     fontSize: 16,
-    color: '#616161',
+    color: '#333',
     marginBottom: 50,
-       lineHeight: 20,
+       lineHeight: 22,
   },
    button: {
       flexDirection: 'row',
@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-end'
     },
     text: {
-      fontSize: 18,
-      fontWeight: '500',
+      fontSize: 16,
+      fontWeight: '400',
       marginRight: 10,
       color: '#333',
     },
